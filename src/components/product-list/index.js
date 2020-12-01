@@ -7,6 +7,10 @@ export default class ProductList extends Component {
         window.alert('The product has been shared!');
     }
 
+    view() {
+        window.alert('The product has been viewed!');
+    }
+
     getProduct(product, index) {
         return (
             <div key={index}>
@@ -14,7 +18,9 @@ export default class ProductList extends Component {
                     <a title={product.name + ' details'} href="/">{product.name}</a>
                 </h3>
                 <p>Description: {product.description} </p>
-                <button className="btn" onClick={this.share}>Share</button>
+                <p>Price: ${product.price}</p>
+                <button className="btn" onClick={this.share}>SHARE ME</button>
+                <button className="btn" onClick={this.view}>VIEW ME</button>
             </div>
         )
     }
@@ -22,7 +28,7 @@ export default class ProductList extends Component {
     render() {
         return (
             <>
-                <h2>Products</h2>
+                <h2>Descriptive Description of...Umm...Store</h2>
                 <br/>
                 <div>
                     {
